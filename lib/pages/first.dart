@@ -42,17 +42,19 @@ class _AnimatedDefaultTextStyleWidgetState
         children: <Widget>[
          // Container(
            // height: 120,
-          new Image.asset("assets/background.jpg"),
+          new Image.asset("assets/background.png",
+          height: 300,
+          width: 500,
+          fit: BoxFit.fill,),
            SizedBox(
-        width: 250.0,
+        width: 220.0,
       child: ColorizeAnimatedTextKit(
     onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context){
-               return Home();
-             }));
-      },
+       //   Navigator.push(context, MaterialPageRoute(builder: (context){
+       //        return Home();
+             },  
     text: [
-      "هيا بنا نلعب ",
+      "Let's Play ",
     ],
     textStyle: TextStyle(
         fontSize: 50.0,
