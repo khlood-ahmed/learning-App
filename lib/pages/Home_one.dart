@@ -51,7 +51,7 @@ class _HomeState extends State<Home_one> {
     children: <Widget>[
       DrawerHeader(
         child: Center(child: Text('Levels',
-        style: TextStyle(fontSize: 40,color: Colors.white),
+        style: TextStyle(fontSize: 40,color: Colors.black),
         )),
         decoration: BoxDecoration(
           color: Colors.amber.shade100,

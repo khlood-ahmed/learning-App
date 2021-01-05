@@ -56,7 +56,10 @@ class _DragPictureState extends State<DragPicture> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar : AppBar(
-      title: Text('Your Score ${score}'),
+      title: Text('Your Score ${score}',style:
+      TextStyle(
+        color: Colors.black
+      ),),
       backgroundColor: Colors.amber.shade100,
     ),
        drawer : Drawer(
@@ -64,7 +67,7 @@ class _DragPictureState extends State<DragPicture> {
     children: <Widget>[
       DrawerHeader(
         child: Center(child: Text('Levels',
-        style: TextStyle(fontSize: 40,color: Colors.white),
+        style: TextStyle(fontSize: 40,color: Colors.black),
         )),
         decoration: BoxDecoration(
           color: Colors.amber.shade100,

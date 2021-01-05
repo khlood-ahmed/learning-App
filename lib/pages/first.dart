@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 import 'Home.dart';
 class AnimatedDefaultTextStyleWidget extends StatefulWidget {
@@ -8,37 +9,73 @@ class AnimatedDefaultTextStyleWidget extends StatefulWidget {
 }
 class _AnimatedDefaultTextStyleWidgetState
     extends State<AnimatedDefaultTextStyleWidget> {
-  bool _first = true;
-  double _fontSize = 60;
-  Color _color = Colors.blue;
+  
   @override
   Widget build(BuildContext context) {
-    return Center(
+  /*  TypewriterAnimatedTextKit(
+  speed: Duration(milliseconds: 2000),
+  totalRepeatCount: 4,
+  text: ["do IT!", "do it RIGHT!!", "do it RIGHT NOW!!!"],
+  textStyle: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+  pause: Duration(milliseconds: 1000),
+  displayFullTextOnTap: true,
+  stopPauseOnTap: true,
+);
+*/
+ AnimatedTextKit(
+      animatedTexts: [
+        FadeAnimatedText(
+          'Fade First',
+          textStyle: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold),
+        ),
+        ScaleAnimatedText(
+          'Then Scale',
+          textStyle: TextStyle(fontSize: 70.0, fontFamily: 'Canterbury'),
+        ),
+      ],
+    );
+    
+    return Scaffold(
+    body:Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Container(
-            height: 120,
-            child: AnimatedDefaultTextStyle(
-              duration: const Duration(milliseconds: 300),
-              style: TextStyle(
-                fontSize: _fontSize,
-                color: _color,
-                fontWeight: FontWeight.bold,
-              ),
-              child: Text('Flutter'),
-            ),
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context){
+         // Container(
+           // height: 120,
+          new Image.asset("assets/background.jpg"),
+           SizedBox(
+        width: 250.0,
+      child: ColorizeAnimatedTextKit(
+    onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context){
                return Home();
              }));
-              setState(() {
-                _fontSize = _first ? 90 : 60;
-                _color = _first ? Colors.blue : Colors.red;
-                _first = !_first;
-              });
+      },
+    text: [
+      "هيا بنا نلعب ",
+    ],
+    textStyle: TextStyle(
+        fontSize: 50.0,
+        fontFamily: "Horizon"
+     
+    ),
+    colors: [
+      Colors.purple,
+      Colors.blue,
+      Colors.yellow,
+      Colors.red,
+    ],
+    textAlign: TextAlign.start,
+  ),
+),
+
+          
+          RaisedButton(
+            color: Colors.amber.shade100,
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+              return Home();
+             }));
             },
             child: Text(
               "Level One",
@@ -46,6 +83,9 @@ class _AnimatedDefaultTextStyleWidgetState
           )
         ],
       ),
-    );
+    ));
+  
   }
+  
 }
+

@@ -32,7 +32,10 @@ class _HomeState extends State<Screen_three>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar : AppBar(
-        title: Text('Your Score ${score.length} / 7'),
+        title: Text('Your Score ${score.length} / 7',style:
+      TextStyle(
+        color: Colors.black
+      ),),
         backgroundColor: Colors.amber.shade100,
       ),
          drawer : Drawer(
@@ -40,7 +43,7 @@ class _HomeState extends State<Screen_three>{
     children: <Widget>[
       DrawerHeader(
         child: Center(child: Text('Levels',
-        style: TextStyle(fontSize: 40,color: Colors.white),
+        style: TextStyle(fontSize: 40,color: Colors.black),
         )),
         decoration: BoxDecoration(
           color: Colors.amber.shade100,
@@ -74,7 +77,8 @@ class _HomeState extends State<Screen_three>{
   ),
 ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.refresh,color:Colors.amber.shade100,),
+        backgroundColor :Colors.amber.shade100,
+      child: Icon(Icons.refresh,color:Colors.black,),
         onPressed: (){
           setState(() {
             score.clear();

@@ -2,6 +2,8 @@ import 'dart:math';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 import 'package:multimedia/pages/Screen_three.dart';
+import 'Home_one.dart';
+import 'level4.dart';
 
 
 class Screen_two extends StatefulWidget{
@@ -28,11 +30,53 @@ class _HomeState extends State<Screen_two>{
   Widget build(BuildContext context) {
    return Scaffold(
     appBar : AppBar(
-      title: Text('Your Score ${score.length} / 7'),
+      title: Text('Your Score ${score.length} / 7',style:
+      TextStyle(
+        color: Colors.black
+      ),),
       backgroundColor: Colors.amber.shade100,
     ),
+    drawer : Drawer(
+  child: ListView(
+    children: <Widget>[
+      DrawerHeader(
+        child: Center(child: Text('Levels',
+        style: TextStyle(fontSize: 35,color: Colors.black),
+        )),
+        decoration: BoxDecoration(
+          color: Colors.amber.shade100,
+        ),
+      ),
+      ListTile(
+        title: Text('level 2'),
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context){
+               return Screen_three();
+             }));
+        },
+      ),
+      ListTile(
+        title: Text('level 3'),
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context){
+                return Home_one();
+              }));
+        },
+      ),
+      ListTile(
+        title: Text('level 4'),
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context){
+                return level4();
+              }));
+        },
+      ),
+    ],
+  ),
+),
     floatingActionButton: FloatingActionButton(
-      child: Icon(Icons.refresh,color:Colors.amber.shade100,),
+      backgroundColor :Colors.amber.shade100,
+      child: Icon(Icons.refresh,color:Colors.black,),
       onPressed: (){
         setState(() {
           score.clear();
