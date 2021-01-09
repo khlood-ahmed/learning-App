@@ -57,11 +57,11 @@ class _HomeState extends State<Screen_three>{
              }));
         },
       ),
-      ListTile(
-        title: Text('level 3'),
+       ListTile(
+        title: Text('level 2'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
-                return Home_one();
+                return level4();
               }));
         },
       ),
@@ -69,10 +69,11 @@ class _HomeState extends State<Screen_three>{
         title: Text('level 4'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
-                return level4();
+                return Home_one();
               }));
         },
       ),
+     
     ],
   ),
 ),

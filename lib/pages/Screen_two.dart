@@ -47,8 +47,16 @@ class _HomeState extends State<Screen_two>{
           color: Colors.amber.shade100,
         ),
       ),
-      ListTile(
+       ListTile(
         title: Text('level 2'),
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context){
+                return level4();
+              }));
+        },
+      ),
+      ListTile(
+        title: Text('level 3'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
                return Screen_three();
@@ -56,21 +64,14 @@ class _HomeState extends State<Screen_two>{
         },
       ),
       ListTile(
-        title: Text('level 3'),
+        title: Text('level 4'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
                 return Home_one();
               }));
         },
       ),
-      ListTile(
-        title: Text('level 4'),
-        onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context){
-                return level4();
-              }));
-        },
-      ),
+     
     ],
   ),
 ),

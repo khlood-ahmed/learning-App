@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget{
     
     return MaterialApp(
 
-      home: AnimatedDefaultTextStyleWidget(), 
+      home:Home_one(),
+      // AnimatedDefaultTextStyleWidget(), 
 
     );
 }

@@ -54,7 +54,9 @@ class _HomeState extends State<Home>{
         title: Text('level 2'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
-               return Screen_three();
+               return level4();
+               //Screen_three();
+               
              }));
         },
       ),
@@ -62,7 +64,8 @@ class _HomeState extends State<Home>{
         title: Text('level 3'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
-                return Home_one();
+                return Screen_three();
+              //  Home_one();
               }));
         },
       ),
@@ -70,7 +73,8 @@ class _HomeState extends State<Home>{
         title: Text('level 4'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
-                return level4();
+                return Home_one();
+                //level4();
               }));
         },
       ),

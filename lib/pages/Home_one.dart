@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:multimedia/pages/Home.dart';
 import 'Screen_three.dart';
@@ -18,7 +19,7 @@ class _HomeState extends State<Home_one> {
   List<TileModel> gridViewTiles = new List<TileModel>();
   List<TileModel> questionPairs = new List<TileModel>();
   var player = AudioCache();
-
+  var Player = AudioPlayer();
   @override
   void initState() {
    // player.play('song.mp3');
@@ -66,7 +67,7 @@ class _HomeState extends State<Home_one> {
       ),
       ListTile(
         title: Text('level 1'),
-        onTap: () {
+        onTap: () { 
           Navigator.push(context, MaterialPageRoute(builder: (context){
                return Home();
              }));
@@ -76,18 +77,24 @@ class _HomeState extends State<Home_one> {
         title: Text('level 2'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
-                return Screen_three();
+                return level4();
+                // Screen_three();
               }));
         },
       ),
       ListTile(
-        title: Text('level 4'),
+        title: Text('level 3'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
-                return level4();
+                return Screen_three();
+              //  level4();
               }));
         },
       ),
+      RaisedButton(child: Text('Close Game'),
+                      onPressed: (){
+                        exit(0);
+                      },),
     ],
   ),
 ),

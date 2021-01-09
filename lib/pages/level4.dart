@@ -40,16 +40,16 @@ class _DragPictureState extends State<DragPicture> {
   double itemsize = 50;
   double newsize = 70;
   int score=0;
-  var player = AudioCache();
+ // var player = AudioCache();
   @override
   void initState() {
-    player.play('song.mp3');
+   // player.play('song.mp3');
     super.initState();
     reStart();
   }
   void reStart() {
   
-        player.play('song.mp3');
+       // player.play('song.mp3');
      
   }
   Widget build(BuildContext context) {
@@ -81,7 +81,7 @@ class _DragPictureState extends State<DragPicture> {
         },
       ),
       ListTile(
-        title: Text('level 2'),
+        title: Text('level 3'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
                 return Screen_three();
@@ -89,7 +89,7 @@ class _DragPictureState extends State<DragPicture> {
         },
       ),
       ListTile(
-        title: Text('level 3'),
+        title: Text('level 4'),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
                 return Home_one();
@@ -205,10 +205,10 @@ class _DragPictureState extends State<DragPicture> {
                   ),
                 ),
               ),
-              RaisedButton(child: Text('Close Game'),
-                      onPressed: (){
-                        exit(0);
-                      },),
+              //RaisedButton(child: Text('Close Game'),
+                //      onPressed: (){
+                  //      exit(0);
+                    //  },),
             ],
             
           ),
