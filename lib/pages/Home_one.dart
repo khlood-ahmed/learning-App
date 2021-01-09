@@ -46,6 +46,13 @@ class _HomeState extends State<Home_one> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar : AppBar(
+      title: Text('Your Score ${points} / 800',style:
+      TextStyle(
+        color: Colors.black
+      ),),
+      backgroundColor: Colors.amber.shade100,
+    ),
        drawer : Drawer(
   child: ListView(
     children: <Widget>[
@@ -97,17 +104,17 @@ class _HomeState extends State<Home_one> {
                 
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(
-                    "$points/800",
-                    style: TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.w500),
-                  ),
-                  Text(
-                    "Points",
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                        fontSize: 14, fontWeight: FontWeight.w300),
-                  ),
+                  //Text(
+                   // "$points/800",
+                   // style: TextStyle(
+                 //       fontSize: 20, fontWeight: FontWeight.w500),
+               //   ),
+                 // Text(
+                   // "Points",
+                   // textAlign: TextAlign.start,
+                   // style: TextStyle(
+                  //      fontSize: 14, fontWeight: FontWeight.w300),
+                //  ),
                 ],
               ) : Container(),
               SizedBox(
@@ -184,7 +191,6 @@ class _HomeState extends State<Home_one> {
     );
   }
 }
-
 
 
 class Tile extends StatefulWidget {
